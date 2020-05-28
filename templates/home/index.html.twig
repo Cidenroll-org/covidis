@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% if intersectData is defined%}
+        There are {{ intersectData.individualKeys()|length }} users who have been moving around; <br />
+        These are:
+            <ul>
+            {% for indiv in intersectData.individualKeys() %}
+                <li><b>{{ indiv }}</b></li>
+            {% endfor %}
+            </ul>
+
+        Intersections are as follows: <br />
+        {% for key, ind in userIntersections %}
+            <table border="1px solid" width="100%">
+                <th>{{ key }}</th>
+                {%  for int, data in ind  %}
+                    <table border="1px" width="100%">
+                        <tr>
+                            <th>Met with</th><th>Informations</th>
+                        </tr>
+                        <tr>
+                            <td>{{ int }}</td>
+                            <td>
+                                {% for dataArr in data %}
+                                    <table border="1px" width="100%">
+                                        <tr>
+                                            <th>Latitude</th>
+                                            <th>Longitude</th>
+                                            <th>@Time met</th>
+                                        </tr>
+                                        <tr>
+                                            <td align="middle">{{ dataArr.lat }}</td>
+                                            <td align="middle">{{ dataArr.lon }}</td>
+                                            <td align="middle">{{ dataArr.at }}</td>
+                                        </tr>
+                                    </table>
+                                {% endfor %}
+                            </td>
+                        </tr>
+                    </table>
+                {% endfor %}
+            </table>
+        {% endfor %}
+
+    {% endif %}
+{% endblock %}

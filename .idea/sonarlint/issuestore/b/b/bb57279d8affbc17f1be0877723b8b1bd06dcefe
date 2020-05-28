@@ -1,0 +1,7 @@
+
+`	php:S11178"FRename "$map" which has the same name as the field declared at line 9.(âÆ“ýüÿÿÿÿ
+`	php:S11926"KDefine a constant instead of duplicating this literal "reportedAt" 5 times.(œ¢Ò¨
+=php:S108'")Either remove or fill this block of code.(Öñëû
+`	php:S1192F"FDefine a constant instead of duplicating this literal "right" 3 times.(Ìÿ¦žüÿÿÿÿ
+c	php:S1788!"NMove arguments "$startLat", "$startLong" after arguments without default value(Ñóí¤
+Kphp:S131["7Add a "case default" clause to this "switch" statement.(Œì Ù
